@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maa Jaya Buildcon | Real Estate, Construction & Solar Developers — Ranchi</title>
+<meta name="description" content="Maa Jaya Buildcon — a Ranchi-based developer delivering real estate construction, solar, industrial supply, audits, civil & mechanical engineering and interiors.">
+<link rel="icon" href="assets/img0.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b1f33; --navy2:#081524; --stone:#eee8da; --stone2:#e2dbc9;
+  --brass:#a9832b; --brass-light:#c9a44e; --brick:#8a3f28;
+  --ink:#1c1a15; --paper:#faf7f0; --line:#c9c0aa; --line-dark:rgba(255,255,255,.18);
+  --max:1260px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none} img{max-width:100%;display:block} button{font:inherit}
+.container{width:min(calc(100% - 44px),var(--max));margin:auto}
+h1,h2,h3,h4{font-family:'Fraunces',serif;margin:0}
+.coord{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+
+/* ---- nav ---- */
+.nav{position:fixed;z-index:60;top:0;left:0;right:0;padding:22px 0;transition:.3s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(11,31,51,.96);backdrop-filter:blur(14px);padding:14px 0;border-color:var(--line-dark)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand img{width:44px;height:44px;object-fit:contain;background:#fff;border:1px solid var(--brass);padding:2px}
+.brand strong{font-family:'Fraunces';font-size:16px;letter-spacing:.02em;display:block}
+.brand small{display:block;color:var(--brass-light);font-family:'IBM Plex Mono';font-size:9px;letter-spacing:.16em;text-transform:uppercase;margin-top:2px}
+.links{display:flex;gap:30px;color:#e9e3d4;font-size:13px}
+.links a{opacity:.82;position:relative;padding:8px 0}
+.links a:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brass-light);transform:scaleX(0);transition:.25s}
+.links a:hover{opacity:1}.links a:hover:after{transform:scaleX(1)}
+.nav-cta{border:1px solid var(--brass-light);color:#fff;padding:11px 18px;font-size:12px;letter-spacing:.05em;font-weight:600;transition:.2s}
+.nav-cta:hover{background:var(--brass);border-color:var(--brass)}
+.menu{display:none;color:#fff;border:0;background:none;font-size:26px;cursor:pointer;padding:6px}
+@media(max-width:920px){.links,.nav-cta{display:none}.menu{display:block}
+  .links.mobile-open{display:flex;position:absolute;top:calc(100% + 1px);left:0;right:0;background:rgba(8,21,36,.98);flex-direction:column;padding:8px 22px 18px;gap:0}
+  .links.mobile-open a{padding:14px 0;border-bottom:1px solid var(--line-dark)}}
+
+/* ---- hero ---- */
+.hero{min-height:100vh;background:linear-gradient(180deg,rgba(8,21,36,.86),rgba(8,21,36,.94)),url('assets/img6.jpeg') center/cover;position:relative;display:flex;align-items:center;color:#fff;overflow:hidden}
+.blueprint{position:absolute;inset:0;background-image:linear-gradient(rgba(201,164,78,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(201,164,78,.09) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 60% 40%,#000 45%,transparent 82%)}
+.corner{position:absolute;width:34px;height:34px;border:1px solid var(--brass-light);opacity:.55}
+.corner.tl{top:110px;left:22px;border-right:0;border-bottom:0}
+.corner.tr{top:110px;right:22px;border-left:0;border-bottom:0}
+.corner.bl{bottom:120px;left:22px;border-right:0;border-top:0}
+.corner.br{bottom:120px;right:22px;border-left:0;border-top:0}
+@media(max-width:920px){.corner{display:none}}
+.hero-inner{position:relative;z-index:2;padding-top:70px;max-width:920px}
+.plot-tag{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--brass-light);padding:8px 14px;color:var(--brass-light);margin-bottom:26px}
+.plot-tag i{width:6px;height:6px;background:var(--brass-light);display:inline-block}
+.hero h1{font-size:clamp(42px,6.4vw,80px);line-height:1.03;font-weight:600;letter-spacing:-.01em;margin-bottom:26px}
+.hero h1 em{font-style:italic;color:var(--brass-light);font-weight:500}
+.hero p{font-size:17px;color:#d6cfbc;max-width:620px;margin-bottom:36px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 24px;font-size:13px;font-weight:600;letter-spacing:.03em;transition:.25s;border:1px solid transparent}
+.btn-brass{background:var(--brass);color:#fff}
+.btn-brass:hover{background:var(--brass-light)}
+.btn-outline{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.hero-scale{position:absolute;left:0;right:0;bottom:0;z-index:2;border-top:1px solid var(--line-dark);background:rgba(8,21,36,.55)}
+.scale-inner{display:flex;justify-content:space-between;padding:16px 0;color:#cfc7b0}
+.scale-inner span{font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+
+/* ---- ledger / credentials strip ---- */
+.ledger{background:var(--stone2);border-bottom:1px solid var(--line)}
+.ledger-row{display:grid;grid-template-columns:repeat(4,1fr)}
+.ledger-item{padding:26px 22px;border-right:1px solid var(--line)}
+.ledger-item:last-child{border-right:0}
+.ledger-item b{display:block;font:600 26px 'Fraunces'}
+.ledger-item span{font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6b6250}
+@media(max-width:760px){.ledger-row{grid-template-columns:repeat(2,1fr)}.ledger-item:nth-child(2){border-right:0}.ledger-item:nth-child(3),.ledger-item:nth-child(4){border-top:1px solid var(--line)}}
+
+section{padding:110px 0}
+.eyebrow{color:var(--brick);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.eyebrow:before{content:"";width:26px;height:1px;background:var(--brick)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:50px}
+.head h2{font-size:clamp(32px,4.4vw,52px);font-weight:600;letter-spacing:-.01em;max-width:640px}
+.head p{max-width:400px;color:#5c5546;font-size:15px}
+
+/* ---- about (deed) ---- */
+.about{display:grid;grid-template-columns:1fr 1.05fr;gap:70px;align-items:start}
+.deed{background:var(--paper);border:1px solid var(--line);position:relative;padding:6px}
+.deed:before{content:"";position:absolute;inset:14px;border:1px solid var(--line)}
+.deed img{width:100%;height:520px;object-fit:cover}
+.deed-cap{position:relative;padding:18px 20px;border-top:1px solid var(--line);display:flex;justify-content:space-between}
+.deed-cap span{font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6b6250}
+.about-copy h3{font-size:clamp(28px,3.4vw,40px);font-weight:600;line-height:1.15;margin-bottom:22px}
+.about-copy p{color:#5c5546;font-size:15.5px;margin-bottom:18px}
+.deed-facts{margin-top:30px;border-top:1px solid var(--line)}
+.deed-fact{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.deed-fact b{font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--brick)}
+.deed-fact span{font-size:14px;color:#333}
+
+/* ---- services as plots ---- */
+.plots{background:var(--navy);color:#fff}
+.plots .head p{color:#b7c0cc}
+.plot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark)}
+.plot{background:var(--navy);padding:34px 28px;position:relative;transition:.3s}
+.plot:hover{background:#0f2740}
+.plot-num{font-family:'IBM Plex Mono';font-size:11px;color:var(--brass-light);letter-spacing:.1em;display:flex;justify-content:space-between}
+.plot h3{font-size:23px;font-weight:600;margin:20px 0 10px}
+.plot p{color:#b7c0cc;font-size:13.5px;margin-bottom:0}
+.plot-corner{position:absolute;top:14px;right:14px;width:14px;height:14px;border-top:1px solid var(--brass-light);border-right:1px solid var(--brass-light);opacity:.6}
+@media(max-width:920px){.plot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.plot-grid{grid-template-columns:1fr}}
+
+/* ---- projects ---- */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.pcard{border:1px solid var(--line);background:var(--paper)}
+.pcard figure{margin:0;position:relative;overflow:hidden;height:210px}
+.pcard img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.pcard:hover img{transform:scale(1.06)}
+.pcard figcaption{position:absolute;top:12px;left:12px;background:var(--navy);color:var(--brass-light);font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.1em;padding:5px 10px}
+.pbody{padding:20px 22px 24px;border-top:1px solid var(--line)}
+.pbody h4{font-size:19px;font-weight:600;margin-bottom:8px}
+.pbody p{color:#5c5546;font-size:13.5px;margin:0}
+@media(max-width:920px){.projects-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.projects-grid{grid-template-columns:1fr}}
+
+/* ---- why / process ---- */
+.why{background:var(--stone2)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.why-item{padding:30px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why-item .coord{color:var(--brick)}
+.why-item h3{font-size:19px;font-weight:600;margin:18px 0 10px}
+.why-item p{font-size:13.5px;color:#5c5546;margin:0}
+@media(max-width:920px){.why-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.why-grid{grid-template-columns:1fr}}
+
+.process-line{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;margin-top:10px}
+.process-line:before{content:"";position:absolute;top:11px;left:0;right:0;height:1px;background:var(--line)}
+.pstep{padding-top:34px;padding-right:20px;position:relative}
+.pstep .dot{position:absolute;top:0;left:0;width:22px;height:22px;border:1px solid var(--brick);background:var(--paper);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono';font-size:9px;color:var(--brick)}
+.pstep h4{font-size:16px;font-weight:600;margin:6px 0 8px}
+.pstep p{font-size:13px;color:#5c5546;margin:0}
+@media(max-width:820px){.process-line{grid-template-columns:1fr 1fr;row-gap:30px}.process-line:before{display:none}}
+@media(max-width:520px){.process-line{grid-template-columns:1fr}}
+
+/* ---- contact ---- */
+.contact{background:var(--navy2);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr .95fr;gap:70px}
+.contact h2{font-size:clamp(34px,4.6vw,50px);font-weight:600;margin-bottom:20px;max-width:520px}
+.contact-copy p{color:#b7c0cc;max-width:480px;font-size:15px}
+.c-rows{margin-top:34px;border-top:1px solid var(--line-dark)}
+.c-row{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line-dark)}
+.c-row b{font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-light)}
+.c-row span{font-size:14px;color:#e9e3d4}
+.form{background:var(--paper);color:var(--ink);padding:34px}
+.form h3{font-size:21px;font-weight:600;margin-bottom:6px}
+.form>p{color:#5c5546;font-size:13px;margin:0 0 22px}
+.field{margin-bottom:16px}
+.field label{display:block;font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6b6250;margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#fff;padding:13px 14px;font:14px 'Work Sans';outline:none}
+.field textarea{min-height:100px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--brick)}
+.form button{width:100%;border:0;cursor:pointer;padding:15px;background:var(--brick);color:#fff;font-weight:600;font-size:13px;letter-spacing:.03em}
+.form button:hover{background:#7a3520}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+footer{background:var(--navy2);color:#9aa6b3;padding:44px 0 24px;border-top:1px solid var(--line-dark)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{color:#fff;font:600 18px 'Fraunces'}
+.footer p{font-size:13px;max-width:300px;color:#8f9aa8}
+.footer h4{color:var(--brass-light);font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.1em;margin-bottom:4px}
+.footer a{display:block;font-size:13px;margin:9px 0;color:#c3cbd4}
+.bottom{border-top:1px solid var(--line-dark);margin-top:36px;padding-top:18px;display:flex;justify-content:space-between;font-size:11px;color:#78849].2}
+@media(max-width:760px){.footer-grid{grid-template-columns:1fr 1fr}.bottom{display:block}.bottom span{display:block;margin-top:8px}}
+
+.wa{position:fixed;right:22px;bottom:22px;z-index:70;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.3);font-weight:800}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"><div class="container nav-inner">
+  <a class="brand" href="#home"><img src="assets/img0.jpeg" alt="Maa Jaya Buildcon logo"><span><strong>MAA JAYA BUILDCON</strong><small>Developers &amp; Engineers</small></span></a>
+  <div class="links" id="siteLinks"><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#why">Why Us</a><a href="#contact">Contact</a></div>
+  <a class="nav-cta" href="#contact">ENQUIRE →</a>
+  <button class="menu" id="menu" aria-label="Open navigation">☰</button>
+</div></nav>
+
+<header class="hero" id="home">
+  <div class="blueprint"></div>
+  <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+  <div class="container hero-inner">
+    <div class="plot-tag"><i></i><span class="coord">Ranchi, Jharkhand — Est. 2023</span></div>
+    <h1>Land, structure<br>and <em>power</em> —<br>planned as one site.</h1>
+    <p>Maa Jaya Buildcon is a Ranchi-based developer and engineering firm — construction, solar, industrial supply, audits, and civil &amp; mechanical design carried under a single site plan, from survey to handover.</p>
+    <div class="actions">
+      <a class="btn btn-brass" href="tel:+918825237427">Call for a Site Visit →</a>
+      <a class="btn btn-outline" href="#projects">View Projects</a>
+    </div>
+  </div>
+  <div class="hero-scale"><div class="container scale-inner">
+    <span>Scroll — Site Plan Below</span><span>Construction · Solar · Engineering</span>
+  </div></div>
+</header>
+
+<div class="ledger"><div class="container ledger-row">
+  <div class="ledger-item"><b>2023</b><span>Founded</span></div>
+  <div class="ledger-item"><b>07</b><span>Core Services</span></div>
+  <div class="ledger-item"><b>PMSGY / JBVNL</b><span>Empanelled Solar</span></div>
+  <div class="ledger-item"><b>Ranchi</b><span>Registered Office</span></div>
+</div></div>
+
+<section id="about"><div class="container about">
+  <div class="deed reveal">
+    <img src="assets/img1.jpeg" alt="Maa Jaya Buildcon site work">
+    <div class="deed-cap"><span>SITE FILE</span><span>MJB / 001</span></div>
+  </div>
+  <div class="about-copy reveal">
+    <div class="eyebrow coord">About the Firm</div>
+    <h3>Engineering ideas into built, powered, standing structures.</h3>
+    <p>We run construction, solar and industrial engineering under one accountable team — so a project's design, procurement and site execution stay connected instead of passing between disconnected vendors.</p>
+    <p>Founded in 2023 by Vivek Verma and Nishant Malay, the firm has since delivered residential, commercial, industrial and solar work across Ranchi and Jamshedpur.</p>
+    <div class="deed-facts">
+      <div class="deed-fact"><b>Founders</b><span>Vivek Verma, Nishant Malay</span></div>
+      <div class="deed-fact"><b>Based In</b><span>C-29, Harmu Housing Colony, Ranchi 834002</span></div>
+      <div class="deed-fact"><b>Solar Panel</b><span>Empanelled with PM Surya Ghar Yojana &amp; JBVNL</span></div>
+      <div class="deed-fact"><b>Scope</b><span>Construction · Solar · Supply · Audit · Design · Interiors</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="plots" id="services"><div class="container">
+  <div class="head reveal"><div><div class="eyebrow coord" style="color:var(--brass-light)"><span></span>What We Do</div><h2>Seven services,<br>one site plan.</h2></div><p>Every capability is run in-house, so the same team that surveys the plot is the one that hands over the keys.</p></div>
+  <div class="plot-grid">
+    <article class="plot reveal"><span class="plot-corner"></span><div class="plot-num"><span>PLOT-01</span><span>CIVIL</span></div><h3>Construction</h3><p>Site execution and civil works coordinated from planning through completion, for residential and commercial builds.</p></article>
+    <article class="plot reveal"><span class="plot-corner"></span><div class="plot-num"><span>PLOT-02</span><span>ENERGY</span></div><h3>Solar</h3><p>Rooftop and ground-mount solar supply, installation and commissioning, empanelled under PMSGY and JBVNL.</p></article>
+    <article class="plot reveal"><span class="plot-corner"></span><div class="plot-num"><span>PLOT-03</span><span>SUPPLY</span></div><h3>Industrial Supply</h3><p>Material and equipment sourcing for industrial and project sites, including facade, lighting and safety hardware.</p></article>
+    <article class="plot reveal"><span class="plot-corner"></span><div class="plot-num"><span>PLOT-04</span><span>AUDIT</span></div><h3>Industrial Audit</h3><p>Inspection-led audits that flag site conditions and gaps, with a clear, actionable improvement plan.</p></article>
+    <article class="plot reveal"><span class="plot-corner"></span><div class="plot-num"><span>PLOT-05</span><span>ENGINEERING</span></div><h3>Civil &amp; Mechanical</h3><p>Design and execution support that keeps drawings, decisions and on-site work aligned throughout the build.</p></article>
+    <article class="plot reveal"><span class="plot-corner"></span><div class="plot-num"><span>PLOT-06</span><span>DESIGN</span></div><h3>Architectural Design</h3><p>Planning and design coordination that turns project requirements into clear, buildable documentation.</p></article>
+    <article class="plot reveal"><span class="plot-corner"></span><div class="plot-num"><span>PLOT-07</span><span>INTERIOR</span></div><h3>Interior Fit-Out</h3><p>Finishing and fit-out work coordinated with the overall build, from function through final detailing.</p></article>
+  </div>
+</div></section>
+
+<section id="projects"><div class="container">
+  <div class="head reveal"><div><div class="eyebrow">Recent Work</div><h2>Sites we've<br>delivered on.</h2></div><p>A sample across residential construction, solar and industrial supply.</p></div>
+  <div class="projects-grid">
+    <div class="pcard reveal"><figure><img src="assets/img6.jpeg" alt="Tatisilwai residential development"><figcaption>RESIDENTIAL</figcaption></figure><div class="pbody"><h4>Tatisilwai Residential</h4><p>2.5-storey residential development built from foundation to finish in Tatisilwai, Ranchi.</p></div></div>
+    <div class="pcard reveal"><figure><img src="assets/img4.jpeg" alt="Rooftop solar installation"><figcaption>SOLAR</figcaption></figure><div class="pbody"><h4>50kW Residential Solar</h4><p>Rooftop solar installed across 10 homes, plus a 2024 project at Hotel KC Hamor, Jamshedpur.</p></div></div>
+    <div class="pcard reveal"><figure><img src="assets/img11.jpeg" alt="Honda Service Centre construction"><figcaption>COMMERCIAL</figcaption></figure><div class="pbody"><h4>Honda Service Centre</h4><p>Commercial build including a premium washroom and sanitation block.</p></div></div>
+  </div>
+</div></section>
+
+<section class="why" id="why"><div class="container">
+  <div class="head reveal"><div><div class="eyebrow">Why Maa Jaya Buildcon</div><h2>What holds<br>a site together.</h2></div><p>Four things clients keep coming back for.</p></div>
+  <div class="why-grid">
+    <div class="why-item reveal"><span class="coord">A</span><h3>One Accountable Team</h3><p>Design, procurement and execution stay under one roof — no handoffs between disconnected vendors.</p></div>
+    <div class="why-item reveal"><span class="coord">B</span><h3>Empanelled Solar</h3><p>Registered under PMSGY and JBVNL, with residential and commercial installations already commissioned.</p></div>
+    <div class="why-item reveal"><span class="coord">C</span><h3>Local, Direct Access</h3><p>A Ranchi-based team you can reach directly, not a call centre routed through a head office.</p></div>
+    <div class="why-item reveal"><span class="coord">D</span><h3>Site-Tested Delivery</h3><p>From Honda Service Centre to hotel solar — work proven on real, occupied sites.</p></div>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <div class="head reveal"><div><div class="eyebrow">How We Work</div><h2>Survey to<br>handover.</h2></div><p>A straightforward five-stage path for every project.</p></div>
+  <div class="process-line">
+    <div class="pstep reveal"><span class="dot">01</span><h4>Site Survey</h4><p>Assess the plot, load and requirement on the ground.</p></div>
+    <div class="pstep reveal"><span class="dot">02</span><h4>Design</h4><p>Architectural and structural planning, made buildable.</p></div>
+    <div class="pstep reveal"><span class="dot">03</span><h4>Procurement</h4><p>Material and equipment sourced for the site's actual scope.</p></div>
+    <div class="pstep reveal"><span class="dot">04</span><h4>Execution</h4><p>Civil, mechanical and solar work coordinated on site.</p></div>
+    <div class="pstep reveal"><span class="dot">05</span><h4>Handover</h4><p>Finishing, commissioning and final sign-off.</p></div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="container contact-grid">
+  <div class="contact-copy reveal">
+    <div class="eyebrow" style="color:var(--brass-light)">Get In Touch</div>
+    <h2>Plan your next site with us.</h2>
+    <p>Call, write, or send an enquiry — we'll get back with a site-visit slot.</p>
+    <div class="c-rows">
+      <div class="c-row"><b>Phone</b><span><a href="tel:+918825237427">+91 88252 37427</a></span></div>
+      <div class="c-row"><b>Email</b><span><a href="mailto:maajayabuildcon2023@gmail.com">maajayabuildcon2023@gmail.com</a></span></div>
+      <div class="c-row"><b>Office</b><span>C-29, Harmu Housing Colony, Ranchi, Jharkhand 834002</span></div>
+    </div>
+  </div>
+  <form class="form reveal" id="enquiryForm">
+    <h3>Send an Enquiry</h3>
+    <p>We usually respond within a business day.</p>
+    <div class="field"><label>Full Name</label><input type="text" required></div>
+    <div class="field"><label>Phone</label><input type="tel" required></div>
+    <div class="field"><label>Interested In</label><select><option>Construction</option><option>Solar</option><option>Industrial Supply</option><option>Industrial Audit</option><option>Civil &amp; Mechanical</option><option>Design</option><option>Interior</option></select></div>
+    <div class="field"><label>Message</label><textarea placeholder="Tell us about your site or requirement"></textarea></div>
+    <button type="submit">Submit Enquiry →</button>
+  </form>
+</div></section>
+
+<footer><div class="container footer-grid">
+  <div><div class="footer-brand">MAA JAYA BUILDCON</div><p>A Ranchi-based developer and engineering firm working across construction, solar and industrial services since 2023.</p></div>
+  <div><h4>SITE</h4><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a></div>
+  <div><h4>SERVICES</h4><a href="#services">Construction</a><a href="#services">Solar</a><a href="#services">Industrial Supply</a></div>
+  <div><h4>CONTACT</h4><a href="tel:+918825237427">+91 88252 37427</a><a href="mailto:maajayabuildcon2023@gmail.com">Email Us</a></div>
+</div>
+<div class="container bottom"><span>© 2026 Maa Jaya Buildcon. All rights reserved.</span><span>Ranchi, Jharkhand</span></div>
+</footer>
+
+<a class="wa" href="https://wa.me/918825237427" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const menu=document.getElementById('menu'),links=document.getElementById('siteLinks');
+menu.addEventListener('click',()=>links.classList.toggle('mobile-open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('mobile-open')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.getElementById('enquiryForm').addEventListener('submit',e=>{e.preventDefault();alert('Thank you — we will get back to you shortly.');e.target.reset();});
+</script>
+</body>
+</html>
